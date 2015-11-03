@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+<title>Julia Staberg</title>
+<link rel="stylesheet" href="website.css"/>
+<link rel="stylesheet" href="css/normalize.css"/>
+    
+</head>
+    
+    
+    <body>
+              
+    <div class="startbild">
+        
+         <h1 class="h2 quotes">THIS IS WHERE WE GET YOU INTERESTED IN US BECAUSE WE ARE INTELLIGENT AND POWERFULL</h1>
+          <h1 class="h2 quotes">WE ARE GONNA PROVIDE YOU WITH THE COOLEST NEWS </h1>
+          
+          <h1 class="h2 quotes">WE ARE GONNA INSPIRE THE WORLD</h1>
+    </div>
+        
+         
+    <div class="squares">
+            <div class="text">
+            <img src="img/square1.jpg">
+            </div>
+           
+           <div class="text">
+           <img src="img/square1.jpg">
+           </div>
+<br>
+           <div class="text">
+           <img src="img/square1.jpg">
+           </div>
+           
+            <div class="text">
+            <img src="img/square1.jpg">
+            </div>
+        
+        </div> 
+    
+      
+    
+        <div class="about"><h2> THIS IS WHO WE ARE </h2>
+        </div>
+         </body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+    <script>
+(function() {
+    var quotes = $(".quotes");
+    var quoteIndex = -1;
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(1000)
+            .delay(5000)
+            .fadeOut(1000, showNextQuote);
+    }
+    showNextQuote();
+})();
+</script>
+   
+</html>
