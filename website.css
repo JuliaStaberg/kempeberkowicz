@@ -12,6 +12,11 @@ html,body{
 }
 */
 
+
+.quotes {
+    display: none;
+}
+
 .startbild {
     background-color: bisque;
     max-width: 100%;
