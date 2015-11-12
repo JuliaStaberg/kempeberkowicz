@@ -24,30 +24,40 @@
     </div>
         
          
-    <div class="squares">
-            <div class="text">
-            <img src="img/square1.jpg">
-            </div>
-           
-           <div class="text">
-           <img src="img/square1.jpg">
-           </div>
-<br>
-           <div class="text">
-           <img src="img/square1.jpg">
-           </div>
-           
-            <div class="text">
-            <img src="img/square1.jpg">
-            </div>
+        <div class="menu">    
+<div id="cycler"> 
+<img class="active" src="img/square1.jpg" alt="My image"/>	
+<img src="img/header.jpg" alt="My image" />
+</div>
         
-        </div> 
+<div id="cycler"> 
+<img class="active" src="img/square1.jpg" alt="My image"/>	
+<img src="img/header.jpg" alt="My image" />
+</div>
+        
+<div id="cycler"> 
+<img class="active" src="img/square1.jpg" alt="My image"/>	
+<img src="img/header.jpg" alt="My image" />
+</div>
+        
+<div id="cycler"> 
+<img class="active" src="img/square1.jpg" alt="My image"/>	
+<img src="img/header.jpg" alt="My image" />
+</div>
+     
+        </div>  
+  
+        
+   
+        <div class="about">
+            <div class="prick"></div>
+            <h2>THIS IS WHO WE ARE</h2>
+        </div>   
+
+ 
+    </body>
     
-      
     
-        <div class="about"><h2> THIS IS WHO WE ARE </h2>
-        </div>
-         </body>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
     <script>
 (function() {
@@ -57,11 +67,28 @@
         ++quoteIndex;
         quotes.eq(quoteIndex % quotes.length)
             .fadeIn(1000)
-            .delay(5000)
+            .delay(3000)
             .fadeOut(1000, showNextQuote);
     }
     showNextQuote();
 })();
 </script>
+    
+    
+<script>function cycleImages(){
+      var $active = $('#cycler .active');
+      var $next = ($active.next().length > 0) ? $active.next() : $('#cycler img:first');
+      $next.css('z-index',2);//move the next image up the pile
+      $active.fadeOut(1500,function(){//fade out the top image
+	  $active.css('z-index',1).show().removeClass('active');//reset the z-index and unhide the image
+          $next.css('z-index',3).addClass('active');//make the next image the top one
+      });
+    }
+
+$(document).ready(function(){
+// run every 7s
+setInterval('cycleImages()', 5000);
+})</script>
    
+    
 </html>
