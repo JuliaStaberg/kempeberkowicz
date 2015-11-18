@@ -35,7 +35,7 @@ h1 {
 .row {
     padding-right: 5%;
     padding-left: 5%;
-    background-color: azure;
+    background-color: aliceblue;
 }
 
 .example {
@@ -45,8 +45,7 @@ h1 {
     padding-top: 0px;
     width: 100%;
     height: 100%;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 25px;
 }
 
 .example .gallery {
@@ -76,7 +75,7 @@ h1 {
 }
 
 .prick {
-    background-color: black;
+    background-color: whitesmoke;
     margin-right: 300px;
     width: 50px;
     height: 50px;
@@ -85,10 +84,11 @@ h1 {
     margin: 0 auto;
     position: relative;
     top: -25px;
+    border:grey;
 }
 
 .prick:hover {
-    background-color: aliceblue;
+    background-color: lightgrey;
 }
 
 
@@ -104,6 +104,26 @@ h2 {
     z-index: 1;
 }
 
+@media screen and (max-width:700px) {
+    h1 {
+    position: inherit;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    margin-left: 60px;
+    margin-right: 10px;
+    padding-top: 200px;
+    font-size: 30px;
+    color: white;   
+}
+    
+    .startbild {
+    background-color: #286eb6;
+    max-width: 100%;
+    height: 400px;
+    z-index: 1;
+    margin-right: 0;
+}
+}
 
 
 /*<img src="http://kurppahosk.com/base/wp-content/uploads/2014/08/KH_Cover_2-2000x1333.jpg" data-width="2000" data-height="1333" class="ready" style="width: 1172px; height: 781.138px; opacity: 1; margin-top: -198.069px; margin-left: 0px;">*/
